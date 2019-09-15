@@ -1,0 +1,33 @@
+import React, { useState } from 'react';
+
+import Display from './Display';
+
+import './Calculator.css';
+
+const Calculator: React.FC = props => {
+	const [displayValue, setDisplayValue] = useState('0');
+	const [numbers, setNumbers] = useState([]);
+	const [operators, setOperators] = useState([]);
+	const [selectedOperator, setSelectedOperators] = useState('');
+	const [storedValue, setStoredValue] = useState('');
+
+	const callOperator = () => {
+		console.log('call operation');
+	};
+
+	const setOperator = () => {
+		console.log('set operation');
+	};
+
+	const updateDisplay = () => {
+		console.log('update display');
+	};
+
+	return (
+		<div className="calculator-container">
+			<Display displayValue={displayValue} />
+		</div>
+	);
+};
+
+export default Calculator;
